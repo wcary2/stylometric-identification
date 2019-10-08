@@ -1,0 +1,36 @@
+Authorship Identification - Identify an author among many possible based on the features used in the text
+Support Vector Machine - a type of machine learning
+N-gram - a contigious sequence of n items from a given sample text. The items can be words, parts-of-speech, phonemes or other. 
+N - gram analysis - using n-grams to compare documents and determine similarity and difference or to predict the next item in a sequence0
+(Sebastiani, 2001) - machine learning classification problem - sorting texts into classes from a predefined set where each class represents a concrete author. 
+byte-level and bit level n-gram analysis is more efficient method of memory usage. 
+
+K byte length the number of n-grams isK+1-N so the  total size of the memory is (K+1-N)*N bytes.
+Potential distance equation
+D(A, a) = SUMOF [x included in A] ( 2(f(A) - f(a)/(f(A) + f(a)))
+where f is frequency of n-gram and A is the profile and a is the article or comaprison text
+
+
+
+Research Papers Synopsi:
+N-gram text classification (Andelka Zeevie) -
+Uses byte level n-gram analysis 3 - 7 characters. Uses serbian language. Create profiles of each author based on
+previous writings and then measure distance from article to author profiles find min distance select author. 
+Store all n-grams in a prefix tree. The prefix tree has O(n) retrieval and insert delete and find operations are identical. Each author has corresponding prefix tree. Used Newspaper articles as corpora. 
+See article for distance measure formula and classification effectiveness methodology. 
+Most simple and doable replication. 
+
+Bit-level n-gram analysis (jian peng, Kim kwang raymond choo, Helen Ashman) -
+Reference to stamatos introduces technique to check intrinsic plagiarism -- using sliding window moving along 
+whole text. Abou-Assaleh used classification based on k-nearest neighbours for detecting malicious code based
+on n-gram analysis. Character based approaches are more common than word based approaches. Hovold used 
+word-position-based n-gram technique and removed most frequent words with increase in precision. 
+
+Authorship verification using deep belief network systems  (Brocardo) - 
+Features analyzed: lexical, syntactical (Parts of speech, punctuation), application specific (Paragraph level features such as number of sentences, number of sentences beginning with upper and lower case, number of
+characters, and words). Used neural network to determine classification with an n-gram model. Used tokenization. Used both enron emails and tweets. 
+
+Authorship verification of online messages for forensic Investigation (Nirkhi) - 
+unsupervised methods: hierarchical clustering and multidimensional scaling. Hierarchical clustering has two types agglomerative and divisive. The Agglomerative has bottom up approach, each time the hiearchy goes up one level clusters are merged. The divisive - goes down and clusters are split up. Agg process is done when all samples remain in the same cluster and div process is done when each stays in its cluster. 
+Multidemnsional scaling - organize the texts into visual representations of their feature space, by forming a matrix of distances between two points into an n-dimensional space while preserving distances as much as possible. Uses 2D MDS plot. 
+Uses Enron corpus. 
